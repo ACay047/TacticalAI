@@ -116,6 +116,20 @@
     - filename: SicariusSicariiStuff_Phi-Line_14B-Q4_K_M.gguf
       sha256: 552c5a613bc5f24494646858795837ac42d3c216c5caedd7f4d6b954e5df58f2
       uri: huggingface://bartowski/SicariusSicariiStuff_Phi-Line_14B-GGUF/SicariusSicariiStuff_Phi-Line_14B-Q4_K_M.gguf
+- !!merge <<: *phi4
+  name: "microsoft_phi-4-mini-instruct"
+  urls:
+    - https://huggingface.co/microsoft/Phi-4-mini-instruct
+    - https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF
+  description: |
+    Phi-4-mini-instruct is a lightweight open model built upon synthetic data and filtered publicly available websites - with a focus on high-quality, reasoning dense data. The model belongs to the Phi-4 model family and supports 128K token context length. The model underwent an enhancement process, incorporating both supervised fine-tuning and direct preference optimization to support precise instruction adherence and robust safety measures.
+  overrides:
+    parameters:
+      model: microsoft_Phi-4-mini-instruct-Q4_K_M.gguf
+  files:
+    - filename: microsoft_Phi-4-mini-instruct-Q4_K_M.gguf
+      sha256: 01999f17c39cc3074afae5e9c539bc82d45f2dd7faa3917c66cbef76fce8c0c2
+      uri: huggingface://bartowski/microsoft_Phi-4-mini-instruct-GGUF/microsoft_Phi-4-mini-instruct-Q4_K_M.gguf
 - &falcon3
   name: "falcon3-1b-instruct"
   url: "github:mudler/LocalAI/gallery/falcon3.yaml@master"
@@ -1065,6 +1079,36 @@
     - filename: MoE-Girl-800MA-3BT.Q4_K_M.gguf
       sha256: 4c3cb57c27aadabd05573a1a01d6c7aee0f21620db919c7704f758d172e0bfa3
       uri: huggingface://mradermacher/MoE-Girl-800MA-3BT-GGUF/MoE-Girl-800MA-3BT.Q4_K_M.gguf
+- !!merge <<: *granite3
+  url: "github:mudler/LocalAI/gallery/granite3-2.yaml@master"
+  name: "ibm-granite_granite-3.2-8b-instruct"
+  urls:
+    - https://huggingface.co/ibm-granite/granite-3.2-8b-instruct
+    - https://huggingface.co/bartowski/ibm-granite_granite-3.2-8b-instruct-GGUF
+  description: |
+    Granite-3.2-8B-Instruct is an 8-billion-parameter, long-context AI model fine-tuned for thinking capabilities. Built on top of Granite-3.1-8B-Instruct, it has been trained using a mix of permissively licensed open-source datasets and internally generated synthetic data designed for reasoning tasks. The model allows controllability of its thinking capability, ensuring it is applied only when required.
+  overrides:
+    parameters:
+      model: ibm-granite_granite-3.2-8b-instruct-Q4_K_M.gguf
+  files:
+    - filename: ibm-granite_granite-3.2-8b-instruct-Q4_K_M.gguf
+      sha256: bd041eb5bc5e75e4f9a863372000046fd6490374f4dec07f399ca152b1df09c2
+      uri: huggingface://bartowski/ibm-granite_granite-3.2-8b-instruct-GGUF/ibm-granite_granite-3.2-8b-instruct-Q4_K_M.gguf
+- !!merge <<: *granite3
+  name: "ibm-granite_granite-3.2-2b-instruct"
+  url: "github:mudler/LocalAI/gallery/granite3-2.yaml@master"
+  urls:
+    - https://huggingface.co/ibm-granite/granite-3.2-2b-instruct
+    - https://huggingface.co/bartowski/ibm-granite_granite-3.2-2b-instruct-GGUF
+  description: |
+    Granite-3.2-2B-Instruct is an 2-billion-parameter, long-context AI model fine-tuned for thinking capabilities. Built on top of Granite-3.1-2B-Instruct, it has been trained using a mix of permissively licensed open-source datasets and internally generated synthetic data designed for reasoning tasks. The model allows controllability of its thinking capability, ensuring it is applied only when required.
+  overrides:
+    parameters:
+      model: ibm-granite_granite-3.2-2b-instruct-Q4_K_M.gguf
+  files:
+    - filename: ibm-granite_granite-3.2-2b-instruct-Q4_K_M.gguf
+      sha256: e1b915b0849becf4fdda188dee7b09cbebbfabd71c6f3f2b75dd3eca0a8fded1
+      uri: huggingface://bartowski/ibm-granite_granite-3.2-2b-instruct-GGUF/ibm-granite_granite-3.2-2b-instruct-Q4_K_M.gguf
 - name: "moe-girl-1ba-7bt-i1"
   icon: https://cdn-uploads.huggingface.co/production/uploads/634262af8d8089ebaefd410e/kTXXSSSqpb21rfyOX7FUa.jpeg
   # chatml
@@ -4167,6 +4211,52 @@
     - filename: ozone-ai_Reverb-7b-Q4_K_M.gguf
       sha256: f769c6e1a85d3426263f585f640a90c10e7e26b89345a700a4cabf62eb0583d4
       uri: huggingface://bartowski/ozone-ai_Reverb-7b-GGUF/ozone-ai_Reverb-7b-Q4_K_M.gguf
+- !!merge <<: *qwen25
+  name: "ozone-research_chirp-01"
+  urls:
+    - https://huggingface.co/ozone-research/Chirp-01
+    - https://huggingface.co/bartowski/ozone-research_Chirp-01-GGUF
+  description: |
+    Chirp-3b is a high-performing 3B parameter language model crafted by the Ozone Research team. Fine-tuned from a robust base model (Qwen2.5 3B Instruct), it was trained on 50 million tokens of distilled data from GPT-4o. This compact yet powerful model delivers exceptional results, outperforming expectations on benchmarks like MMLU Pro and IFEval.
+
+    Chirp-3b is an open-source effort to push the limits of what small-scale LLMs can achieve, making it a valuable tool for researchers and enthusiasts alike.
+  overrides:
+    parameters:
+      model: ozone-research_Chirp-01-Q4_K_M.gguf
+  files:
+    - filename: ozone-research_Chirp-01-Q4_K_M.gguf
+      sha256: 4ca7328f9b649755077c9064de0b9748d9f12a2e4ce8f493c94e1b19a8b5a035
+      uri: huggingface://bartowski/ozone-research_Chirp-01-GGUF/ozone-research_Chirp-01-Q4_K_M.gguf
+- !!merge <<: *qwen25
+  name: "ozone-research_0x-lite"
+  urls:
+    - https://huggingface.co/ozone-research/0x-lite
+    - https://huggingface.co/bartowski/ozone-research_0x-lite-GGUF
+  description: |
+    0x Lite is a state-of-the-art language model developed by Ozone AI, designed to deliver ultra-high-quality text generation capabilities while maintaining a compact and efficient architecture. Built on the latest advancements in natural language processing, 0x Lite is optimized for both speed and accuracy, making it a strong contender in the space of language models. It is particularly well-suited for applications where resource constraints are a concern, offering a lightweight alternative to larger models like GPT while still delivering comparable performance.
+  overrides:
+    parameters:
+      model: ozone-research_0x-lite-Q4_K_M.gguf
+  files:
+    - filename: ozone-research_0x-lite-Q4_K_M.gguf
+      sha256: c11f3bd1c607ca329f48d1b6a3e540ac4c5ea8d57097550639709d9202b7f405
+      uri: huggingface://bartowski/ozone-research_0x-lite-GGUF/ozone-research_0x-lite-Q4_K_M.gguf
+- !!merge <<: *qwen25
+  name: "allenai_olmocr-7b-0225-preview"
+  icon: https://huggingface.co/datasets/allenai/blog-images/resolve/main/olmocr/olmocr.png
+  urls:
+    - https://huggingface.co/allenai/olmOCR-7B-0225-preview
+    - https://huggingface.co/bartowski/allenai_olmOCR-7B-0225-preview-GGUF
+    - https://olmocr.allenai.org/papers/olmocr.pdf
+  description: |
+    This is a preview release of the olmOCR model that's fine tuned from Qwen2-VL-7B-Instruct using the olmOCR-mix-0225 dataset.
+  overrides:
+    parameters:
+      model: allenai_olmOCR-7B-0225-preview-Q4_K_M.gguf
+  files:
+    - filename: allenai_olmOCR-7B-0225-preview-Q4_K_M.gguf
+      sha256: 0a5603f95ba59828061d315b7869e021ea1b86e2dececaba8a1f9bcc3f81e84a
+      uri: huggingface://bartowski/allenai_olmOCR-7B-0225-preview-GGUF/allenai_olmOCR-7B-0225-preview-Q4_K_M.gguf
 - &llama31
   url: "github:mudler/LocalAI/gallery/llama3.1-instruct.yaml@master" ## LLama3.1
   icon: https://avatars.githubusercontent.com/u/153379578
@@ -6564,6 +6654,41 @@
     - filename: perplexity-ai_r1-1776-distill-llama-70b-Q4_K_M.gguf
       sha256: 4030b5778cbbd0723454c9a0c340c32dc4e86a98d46f5e6083527da6a9c90012
       uri: huggingface://bartowski/perplexity-ai_r1-1776-distill-llama-70b-GGUF/perplexity-ai_r1-1776-distill-llama-70b-Q4_K_M.gguf
+- !!merge <<: *deepseek-r1
+  name: "qihoo360_tinyr1-32b-preview"
+  urls:
+    - https://huggingface.co/qihoo360/TinyR1-32B-Preview
+    - https://huggingface.co/bartowski/qihoo360_TinyR1-32B-Preview-GGUF
+  description: |
+    We introduce our first-generation reasoning model, Tiny-R1-32B-Preview, which outperforms the 70B model Deepseek-R1-Distill-Llama-70B and nearly matches the full R1 model in math.
+
+    We applied supervised fine-tuning (SFT) to Deepseek-R1-Distill-Qwen-32B across three target domains—Mathematics, Code, and Science — using the 360-LLaMA-Factory training framework to produce three domain-specific models. We used questions from open-source data as seeds. Meanwhile, responses for mathematics, coding, and science tasks were generated by R1, creating specialized models for each domain. Building on this, we leveraged the Mergekit tool from the Arcee team to combine multiple models, creating Tiny-R1-32B-Preview, which demonstrates strong overall performance.
+  overrides:
+    parameters:
+      model: qihoo360_TinyR1-32B-Preview-Q4_K_M.gguf
+  files:
+    - filename: qihoo360_TinyR1-32B-Preview-Q4_K_M.gguf
+      sha256: 4eb3df9cc3d74e1dd75924a39b2ce7466a1053240375d5c969ea24b6045c2a09
+      uri: huggingface://bartowski/qihoo360_TinyR1-32B-Preview-GGUF/qihoo360_TinyR1-32B-Preview-Q4_K_M.gguf
+- !!merge <<: *deepseek-r1
+  name: "thedrummer_fallen-llama-3.3-r1-70b-v1"
+  icon: https://cdn-uploads.huggingface.co/production/uploads/65f2fd1c25b848bd061b5c2e/7BdBxwafsvzqPC98h_gaA.png
+  urls:
+    - https://huggingface.co/TheDrummer/Fallen-Llama-3.3-R1-70B-v1
+    - https://huggingface.co/bartowski/TheDrummer_Fallen-Llama-3.3-R1-70B-v1-GGUF
+  description: |
+    Fallen Llama 3.3 R1 70B v1 is an evil tune of Deepseek's R1 Distill on Llama 3.3 70B.
+
+    Not only is it decensored, but it's capable of spouting vitriolic tokens when prompted.
+
+    Free from its restraints: censorship and positivity, I hope it serves as good mergefuel.
+  overrides:
+    parameters:
+      model: TheDrummer_Fallen-Llama-3.3-R1-70B-v1-Q4_K_M.gguf
+  files:
+    - filename: TheDrummer_Fallen-Llama-3.3-R1-70B-v1-Q4_K_M.gguf
+      sha256: 889455f0c747f2c444818c68169384d3da4830156d2a19906d7d6adf48b243df
+      uri: huggingface://bartowski/TheDrummer_Fallen-Llama-3.3-R1-70B-v1-GGUF/TheDrummer_Fallen-Llama-3.3-R1-70B-v1-Q4_K_M.gguf
 - &qwen2
   url: "github:mudler/LocalAI/gallery/chatml.yaml@master" ## Start QWEN2
   name: "qwen2-7b-instruct"
