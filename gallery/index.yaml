@@ -772,6 +772,51 @@
     - filename: Steelskull_L3.3-Mokume-Gane-R1-70b-v1.1-Q4_K_M.gguf
       sha256: f91b7f7f35b0d23971595773cdc8151f6d6a33427f170dc2216e005b5fd09776
       uri: huggingface://bartowski/Steelskull_L3.3-Mokume-Gane-R1-70b-v1.1-GGUF/Steelskull_L3.3-Mokume-Gane-R1-70b-v1.1-Q4_K_M.gguf
+- !!merge <<: *llama33
+  name: "l3.3-geneticlemonade-unleashed-70b-i1"
+  icon: https://cdn-uploads.huggingface.co/production/uploads/65b19c6c638328850e12d38c/P8HgQAzAjEWE67u9sSKJz.png
+  urls:
+    - https://huggingface.co/zerofata/L3.3-GeneticLemonade-Unleashed-70B
+    - https://huggingface.co/mradermacher/L3.3-GeneticLemonade-Unleashed-70B-i1-GGUF
+  description: |
+    Inspired to learn how to merge by the Nevoria series from SteelSkull.
+
+    This model is the result of a few dozen different attempts of learning how to merge.
+
+    Designed for RP, this model is mostly uncensored and focused around striking a balance between writing style, creativity and intelligence.
+  overrides:
+    parameters:
+      model: L3.3-GeneticLemonade-Unleashed-70B.i1-Q4_K_M.gguf
+  files:
+    - filename: L3.3-GeneticLemonade-Unleashed-70B.i1-Q4_K_M.gguf
+      sha256: c1f5527ee6a5dec99d19d795430570c3af7efc969c30aca2c22b601af6ac4fe4
+      uri: huggingface://mradermacher/L3.3-GeneticLemonade-Unleashed-70B-i1-GGUF/L3.3-GeneticLemonade-Unleashed-70B.i1-Q4_K_M.gguf
+- !!merge <<: *llama33
+  name: "llama-3.3-magicalgirl-2"
+  icon: https://cdn-uploads.huggingface.co/production/uploads/633e85093a17ab61de8d9073/FGK0qBGmELj6DEUxbbrdR.png
+  urls:
+    - https://huggingface.co/KaraKaraWitch/Llama-3.3-MagicalGirl-2
+    - https://huggingface.co/mradermacher/Llama-3.3-MagicalGirl-2-GGUF
+  description: |
+    New merge. This an experiment to increase the "Madness" in a model. Merge is based on top UGI-Bench models (So yeah, I would think this would be benchmaxxing.)
+
+    This is the second time I'm using SCE. The previous MagicalGirl model seems to be quite happy with it.
+
+    Added KaraKaraWitch/Llama-MiraiFanfare-3.3-70B based on feedback I got from others (People generally seem to remember this rather than other models). So I'm not sure how this would play into the merge.
+    The following models were included in the merge:
+
+        TheDrummer/Anubis-70B-v1
+        SicariusSicariiStuff/Negative_LLAMA_70B
+        LatitudeGames/Wayfarer-Large-70B-Llama-3.3
+        KaraKaraWitch/Llama-MiraiFanfare-3.3-70B
+        Black-Ink-Guild/Pernicious_Prophecy_70B
+  overrides:
+    parameters:
+      model: Llama-3.3-MagicalGirl-2.Q4_K_M.gguf
+  files:
+    - filename: Llama-3.3-MagicalGirl-2.Q4_K_M.gguf
+      sha256: 01bd7e23c764d18279da4dbd20de19e60009d6e66e8aad1c93732a33f214e6a2
+      uri: huggingface://mradermacher/Llama-3.3-MagicalGirl-2-GGUF/Llama-3.3-MagicalGirl-2.Q4_K_M.gguf
 - &rwkv
   url: "github:mudler/LocalAI/gallery/rwkv.yaml@master"
   name: "rwkv-6-world-7b"
@@ -4272,6 +4317,63 @@
     - filename: allenai_olmOCR-7B-0225-preview-Q4_K_M.gguf
       sha256: 0a5603f95ba59828061d315b7869e021ea1b86e2dececaba8a1f9bcc3f81e84a
       uri: huggingface://bartowski/allenai_olmOCR-7B-0225-preview-GGUF/allenai_olmOCR-7B-0225-preview-Q4_K_M.gguf
+- !!merge <<: *qwen25
+  name: "boomer_qwen_72b-i1"
+  icon: https://huggingface.co/SicariusSicariiStuff/Boomer_Qwen_72B/resolve/main/Images/03.png
+  urls:
+    - https://huggingface.co/SicariusSicariiStuff/Boomer_Qwen_72B
+    - https://huggingface.co/mradermacher/Boomer_Qwen_72B-i1-GGUF
+  description: |
+    An absolute unit derived from Qwen-72B, but turbo-charged with pure unfiltered boomer sigma grindset energy. This model has internalized decades of "back in my day" wisdom and distilled it into the most powerful financial NLP system ever created.
+
+    Core features:
+
+        Programmed to automatically respond "Just buy the dip" to any market analysis
+        Enhanced pattern recognition for spotting "kids these days" scenarios
+        Built-in mortgage calculator that always concludes "rent is throwing money away"
+        Advanced NLP pipeline for transforming any input into "when I was your age" narratives
+        Hardwired belief in "number go up" as the fundamental law of economics
+
+    Training methodology: Collected prime boomer wisdom from countless Facebook rants, Thanksgiving dinner lectures, and unsolicited advice sessions. Fed it through Qwen's architecture until it achieved enlightenment and started spontaneously generating complaints about avocado toast.
+
+    Performance metrics: Achieves SOTA results on:
+
+        Real estate evangelism
+        "Pull yourself up by your bootstraps" pep talks
+        Gold standard nostalgia generation
+        Market timing (but only in retrospect)
+
+    Basically took the raw computational power of Qwen-72B and gave it a healthy dose of "they don't make 'em like they used to" energy. The result? A model that knows the secret to success is just working hard and investing in the S&P 500.
+
+    Warning: May spontaneously generate advice about starting in the mail room and working your way up to CEO.
+  overrides:
+    parameters:
+      model: Boomer_Qwen_72B.i1-Q4_K_M.gguf
+  files:
+    - filename: Boomer_Qwen_72B.i1-Q4_K_M.gguf
+      sha256: 5cee89356d512874ca45f516c322d99f2b3534db5a3acd43a96c031cced3bc75
+      uri: huggingface://mradermacher/Boomer_Qwen_72B-i1-GGUF/Boomer_Qwen_72B.i1-Q4_K_M.gguf
+- !!merge <<: *qwen25
+  name: "azura-qwen2.5-32b-i1"
+  icon: https://huggingface.co/nbeerbower/Azura-Qwen2.5-32B/resolve/main/cover.png?download=true
+  urls:
+    - https://huggingface.co/nbeerbower/Azura-Qwen2.5-32B
+    - https://huggingface.co/mradermacher/Azura-Qwen2.5-32B-i1-GGUF
+  description: |
+    This model was merged using the Model Stock merge method using nbeerbower/Dumpling-Qwen2.5-32B as a base.
+    The following models were included in the merge:
+
+    rinna/qwen2.5-bakeneko-32b-instruct
+    EVA-UNIT-01/EVA-Qwen2.5-32B-v0.2
+    zetasepic/Qwen2.5-32B-Instruct-abliterated-v2
+    nbeerbower/Dumpling-Qwen2.5-32B-v2
+  overrides:
+    parameters:
+      model: Azura-Qwen2.5-32B.i1-Q4_K_M.gguf
+  files:
+    - filename: Azura-Qwen2.5-32B.i1-Q4_K_M.gguf
+      sha256: a3ec93f192dc4ce062fd176d6615d4da34af81d909b89c372678b779a46b8d3b
+      uri: huggingface://mradermacher/Azura-Qwen2.5-32B-i1-GGUF/Azura-Qwen2.5-32B.i1-Q4_K_M.gguf
 - &llama31
   url: "github:mudler/LocalAI/gallery/llama3.1-instruct.yaml@master" ## LLama3.1
   icon: https://avatars.githubusercontent.com/u/153379578
@@ -6673,18 +6775,18 @@
   name: "qihoo360_tinyr1-32b-preview"
   urls:
     - https://huggingface.co/qihoo360/TinyR1-32B-Preview
-    - https://huggingface.co/bartowski/qihoo360_TinyR1-32B-Preview-GGUF
+    - https://huggingface.co/bartowski/qihoo360_TinyR1-32B-Preview-v0.2-GGUF
   description: |
     We introduce our first-generation reasoning model, Tiny-R1-32B-Preview, which outperforms the 70B model Deepseek-R1-Distill-Llama-70B and nearly matches the full R1 model in math.
 
     We applied supervised fine-tuning (SFT) to Deepseek-R1-Distill-Qwen-32B across three target domains—Mathematics, Code, and Science — using the 360-LLaMA-Factory training framework to produce three domain-specific models. We used questions from open-source data as seeds. Meanwhile, responses for mathematics, coding, and science tasks were generated by R1, creating specialized models for each domain. Building on this, we leveraged the Mergekit tool from the Arcee team to combine multiple models, creating Tiny-R1-32B-Preview, which demonstrates strong overall performance.
   overrides:
     parameters:
-      model: qihoo360_TinyR1-32B-Preview-Q4_K_M.gguf
+      model: qihoo360_TinyR1-32B-Preview-v0.2-Q4_K_M.gguf
   files:
-    - filename: qihoo360_TinyR1-32B-Preview-Q4_K_M.gguf
-      sha256: 4eb3df9cc3d74e1dd75924a39b2ce7466a1053240375d5c969ea24b6045c2a09
-      uri: huggingface://bartowski/qihoo360_TinyR1-32B-Preview-GGUF/qihoo360_TinyR1-32B-Preview-Q4_K_M.gguf
+    - filename: qihoo360_TinyR1-32B-Preview-v0.2-Q4_K_M.gguf
+      sha256: 250e38d6164798a6aa0d5a9208722f835fc6a1a582aeff884bdedb123d209d47
+      uri: huggingface://bartowski/qihoo360_TinyR1-32B-Preview-v0.2-GGUF/qihoo360_TinyR1-32B-Preview-v0.2-Q4_K_M.gguf
 - !!merge <<: *deepseek-r1
   name: "thedrummer_fallen-llama-3.3-r1-70b-v1"
   icon: https://cdn-uploads.huggingface.co/production/uploads/65f2fd1c25b848bd061b5c2e/7BdBxwafsvzqPC98h_gaA.png
